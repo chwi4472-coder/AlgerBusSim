@@ -25,12 +25,12 @@ jobs:
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: Android
           unityVersion: 6000.6.8f1
           buildMethod: AlgerBusSim.EditorTools.BuildScript.BuildAndroid
-          # The build script already calls Configure() + creates the scene.
-          # Keep default build options; APK lands in Builds/AlgerBusSim.apk
           allowDirtyBuild: true
 
       - name: Upload APK artifact
