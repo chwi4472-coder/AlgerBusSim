@@ -1,0 +1,13 @@
+{
+  "id": "algiers_m0",
+  "cityId": "algiers",
+  "name": { "fr": "Bab El Oued → Alger Centre", "ar": "باب الوادي → الجزائر الوسطى", "dz": "باب الوادي → الجزائر الوسطى" },
+  "startNodeId": "n001",
+  "endNodeId": "n004",
+  "stops": [ "s01", "s02", "s03" ],
+  "timetable": {
+    "headwayMin": 12,
+    "firstDepartureHour": 5,
+    "lastDepartureHour": 22
+  }
+}

@@ -1,0 +1,431 @@
+{
+ "version": 1,
+ "root": "art",
+ "textures": [
+  {
+   "key": "bus_interior",
+   "file": "art/bus_interior.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "bus_plate",
+   "file": "art/bus_plate.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "bus_urban_front",
+   "file": "art/bus_urban_front.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "bus_urban_rear",
+   "file": "art/bus_urban_rear.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "bus_urban_side",
+   "file": "art/bus_urban_side.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "ground_asphalt",
+   "file": "art/ground_asphalt.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "ground_kerb",
+   "file": "art/ground_kerb.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "ground_markings",
+   "file": "art/ground_markings.png",
+   "kind": "sprite",
+   "sprites": {
+    "mark_dash": [
+     0,
+     0,
+     256,
+     256
+    ],
+    "mark_solid": [
+     256,
+     0,
+     256,
+     256
+    ],
+    "mark_double_yellow": [
+     512,
+     0,
+     256,
+     256
+    ],
+    "mark_zebra": [
+     768,
+     0,
+     256,
+     256
+    ],
+    "mark_arrow_straight": [
+     0,
+     256,
+     256,
+     256
+    ],
+    "mark_arrow_left": [
+     256,
+     256,
+     256,
+     256
+    ],
+    "mark_arrow_right": [
+     512,
+     256,
+     256,
+     256
+    ],
+    "mark_bus": [
+     768,
+     256,
+     256,
+     256
+    ]
+   }
+  },
+  {
+   "key": "ground_sidewalk",
+   "file": "art/ground_sidewalk.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "roof_flat",
+   "file": "art/roof_flat.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "roof_tile",
+   "file": "art/roof_tile.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "shop_babeloued",
+   "file": "art/shop_babeloued.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "shop_centre",
+   "file": "art/shop_centre.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "shop_elharrach",
+   "file": "art/shop_elharrach.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "shop_hydra",
+   "file": "art/shop_hydra.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "shop_kouba",
+   "file": "art/shop_kouba.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "sign_gantry",
+   "file": "art/sign_gantry.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "signs",
+   "file": "art/signs.png",
+   "kind": "sprite",
+   "sprites": {
+    "sign_stop": [
+     0,
+     0,
+     512,
+     512
+    ],
+    "sign_speed50": [
+     512,
+     0,
+     512,
+     512
+    ],
+    "sign_noentry": [
+     1024,
+     0,
+     512,
+     512
+    ],
+    "sign_yield": [
+     1536,
+     0,
+     512,
+     512
+    ],
+    "sign_parking": [
+     0,
+     512,
+     512,
+     512
+    ],
+    "sign_busstop": [
+     512,
+     512,
+     512,
+     512
+    ],
+    "sign_crossing": [
+     1024,
+     512,
+     512,
+     512
+    ],
+    "sign_roundabout": [
+     1536,
+     512,
+     512,
+     512
+    ],
+    "sign_hospital": [
+     0,
+     1024,
+     512,
+     512
+    ],
+    "sign_fuel": [
+     512,
+     1024,
+     512,
+     512
+    ],
+    "sign_police": [
+     1024,
+     1024,
+     512,
+     512
+    ],
+    "sign_noparking": [
+     1536,
+     1024,
+     512,
+     512
+    ],
+    "plate_didouche": [
+     0,
+     1536,
+     512,
+     512
+    ],
+    "plate_zighoud": [
+     512,
+     1536,
+     512,
+     512
+    ],
+    "plate_martyrs": [
+     1024,
+     1536,
+     512,
+     512
+    ],
+    "plate_babeloued": [
+     1536,
+     1536,
+     512,
+     512
+    ]
+   }
+  },
+  {
+   "key": "sky_ramp",
+   "file": "art/sky_ramp.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "ui",
+   "file": "art/ui.png",
+   "kind": "sprite",
+   "sprites": {
+    "ui_panel": [
+     0,
+     0,
+     512,
+     512,
+     "panel"
+    ],
+    "ui_panel_small": [
+     512,
+     512,
+     256,
+     256,
+     "panel"
+    ],
+    "ui_btn": [
+     512,
+     256,
+     256,
+     256,
+     "btn"
+    ],
+    "ui_btn_press": [
+     0,
+     256,
+     256,
+     256,
+     "btnpress"
+    ],
+    "icon_bus": [
+     256,
+     512,
+     256,
+     256,
+     "icon"
+    ],
+    "icon_money": [
+     512,
+     512,
+     256,
+     256,
+     "icon"
+    ],
+    "icon_fuel": [
+     0,
+     256,
+     256,
+     256,
+     "icon"
+    ],
+    "icon_passenger": [
+     256,
+     256,
+     256,
+     256,
+     "icon"
+    ],
+    "icon_clock": [
+     512,
+     256,
+     256,
+     256,
+     "icon"
+    ],
+    "icon_door": [
+     256,
+     0,
+     256,
+     256,
+     "icon"
+    ],
+    "icon_ticket": [
+     512,
+     0,
+     256,
+     256,
+     "icon"
+    ],
+    "icon_star": [
+     0,
+     256,
+     256,
+     256,
+     "icon"
+    ],
+    "icon_flag": [
+     256,
+     256,
+     256,
+     256,
+     "icon"
+    ],
+    "ui_coin": [
+     768,
+     768,
+     192,
+     192,
+     "coin"
+    ]
+   }
+  },
+  {
+   "key": "wall_babeloued_a",
+   "file": "art/wall_babeloued_a.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "wall_babeloued_b",
+   "file": "art/wall_babeloued_b.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "wall_centre_a",
+   "file": "art/wall_centre_a.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "wall_centre_b",
+   "file": "art/wall_centre_b.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "wall_elharrach_a",
+   "file": "art/wall_elharrach_a.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "wall_elharrach_b",
+   "file": "art/wall_elharrach_b.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "wall_hydra_a",
+   "file": "art/wall_hydra_a.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "wall_hydra_b",
+   "file": "art/wall_hydra_b.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "wall_kouba_a",
+   "file": "art/wall_kouba_a.png",
+   "kind": "sprite",
+   "sprites": {}
+  },
+  {
+   "key": "wall_kouba_b",
+   "file": "art/wall_kouba_b.png",
+   "kind": "sprite",
+   "sprites": {}
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "texture": "bus",
+ "sprites": {
+  "bus_urban_side": [
+   0,
+   0,
+   2048,
+   1024,
+   "side"
+  ],
+  "bus_urban_front": [
+   0,
+   0,
+   1024,
+   1024,
+   "front"
+  ],
+  "bus_urban_rear": [
+   0,
+   0,
+   1024,
+   1024,
+   "rear"
+  ],
+  "bus_interior": [
+   0,
+   0,
+   1024,
+   1024,
+   "interior"
+  ],
+  "bus_plate": [
+   0,
+   0,
+   1024,
+   1024,
+   "plate"
+  ]
+ }
+}

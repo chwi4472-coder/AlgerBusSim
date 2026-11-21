@@ -1,0 +1,53 @@
+{
+ "texture": "ground_markings",
+ "sprites": {
+  "mark_dash": [
+   0,
+   0,
+   256,
+   256
+  ],
+  "mark_solid": [
+   256,
+   0,
+   256,
+   256
+  ],
+  "mark_double_yellow": [
+   512,
+   0,
+   256,
+   256
+  ],
+  "mark_zebra": [
+   768,
+   0,
+   256,
+   256
+  ],
+  "mark_arrow_straight": [
+   0,
+   256,
+   256,
+   256
+  ],
+  "mark_arrow_left": [
+   256,
+   256,
+   256,
+   256
+  ],
+  "mark_arrow_right": [
+   512,
+   256,
+   256,
+   256
+  ],
+  "mark_bus": [
+   768,
+   256,
+   256,
+   256
+  ]
+ }
+}

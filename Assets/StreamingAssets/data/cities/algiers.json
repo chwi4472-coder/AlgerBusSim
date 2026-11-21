@@ -1,0 +1,23 @@
+{
+  "id": "algiers",
+  "slug": "algiers",
+  "name": { "fr": "Alger", "ar": "الجزائر", "dz": "الجزائر" },
+  "boundsHalfWidthKm": 2.8,
+  "boundsHalfDepthKm": 2.8,
+  "startNodeId": "n001",
+  "endNodeId": "n004",
+  "timeZoneOffsetHours": 1,
+  "districts": [
+    { "id": "bab_el_oued", "name": { "fr": "Bab El Oued", "ar": "باب الوادي", "dz": "باب الوادي" }, "kind": 0 },
+    { "id": "alger_centre", "name": { "fr": "Alger Centre", "ar": "الجزائر الوسطى", "dz": "الجزائر الوسطى" }, "kind": 1 },
+    { "id": "el_harrach", "name": { "fr": "El Harrach", "ar": "محافظة الحاجز", "dz": "الحاجز" }, "kind": 3 },
+    { "id": "hydra", "name": { "fr": "Hydra", "ar": "حيدرة", "dz": "حيدرة" }, "kind": 2 },
+    { "id": "kouba", "name": { "fr": "Al Kouba", "ar": "الكوبر", "dz": "الكوبر" }, "kind": 4 }
+  ],
+  "landmarks": [
+    { "id": "grande_poste", "districtId": "alger_centre", "nodeId": "n004", "kind": "neo_mauritsian" },
+    { "id": "martyrs_square", "districtId": "alger_centre", "nodeId": "n003", "kind": "modern" },
+    { "id": "bab_el_oued_market", "districtId": "bab_el_oued", "nodeId": "n007", "kind": "market" },
+    { "id": "port_crates", "districtId": "el_harrach", "nodeId": "n009", "kind": "port" }
+  ]
+}

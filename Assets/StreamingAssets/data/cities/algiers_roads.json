@@ -1,0 +1,43 @@
+{
+  "nodes": [
+    { "id": "n001", "x": -1150.0, "z": -300.0, "y": 0.0, "kind": "terminal" },
+    { "id": "n002", "x": -650.0, "z": -300.0, "y": 0.0, "kind": "junction" },
+    { "id": "n003", "x": -60.0, "z": -150.0, "y": 0.0, "kind": "junction" },
+    { "id": "n004", "x": 420.0, "z": -180.0, "y": 0.0, "kind": "junction" },
+    { "id": "n005", "x": -320.0, "z": -520.0, "y": 0.0, "kind": "junction" },
+    { "id": "n006", "x": -150.0, "z": -650.0, "y": 0.0, "kind": "junction" },
+    { "id": "n007", "x": -1000.0, "z": -560.0, "y": 0.0, "kind": "market" },
+    { "id": "n009", "x": 900.0, "z": -500.0, "y": 0.0, "kind": "port" }
+  ],
+  "edges": [
+    {
+      "id": "e001", "from": "n001", "to": "n002",
+      "lanes": 2, "width": 7.0, "kind": "arterial",
+      "speedLimit": 50, "oneway": false, "profile": "urban",
+      "sidewalk": 2.5, "parking": true
+    },
+    {
+      "id": "e002", "from": "n002", "to": "n003",
+      "lanes": 2, "width": 7.0, "kind": "arterial",
+      "speedLimit": 50, "oneway": false, "profile": "urban",
+      "sidewalk": 2.5, "parking": true
+    },
+    {
+      "id": "e003", "from": "n003", "to": "n004",
+      "lanes": 2, "width": 7.5, "kind": "arterial",
+      "speedLimit": 50, "oneway": false, "profile": "urban",
+      "sidewalk": 2.5, "parking": true
+    },
+    {
+      "id": "e004", "from": "n002", "to": "n005",
+      "lanes": 2, "width": 6.5, "kind": "collector",
+      "speedLimit": 40, "oneway": false, "profile": "urban",
+      "sidewalk": 2.0, "parking": false
+    }
+  ],
+  "stops": [
+    { "id": "s01", "edge": "e001", "t": 0.0, "name": { "fr": "Bab El Oued", "ar": "باب الوادي", "dz": "باب الوادي" } },
+    { "id": "s02", "edge": "e002", "t": 0.45, "name": { "fr": "Martyrs Square", "ar": "ساحة الشهداء", "dz": "ساحة الشهداء" } },
+    { "id": "s03", "edge": "e003", "t": 0.8, "name": { "fr": "Grande Poste", "ar": "الملك كمال", "dz": "الملك كمال" } }
+  ]
+}
