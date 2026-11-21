@@ -85,7 +85,7 @@ namespace AlgerBusSim.Localization
 
         public static string FormatDzd(long amount)
         {
-            string arabic = _language == "ar" || _language == "dz";
+            bool arabic = _language == "ar" || _language == "dz";
             string digits = arabic ? ToArabicNumerals(amount.ToString()) : amount.ToString();
             string unit = arabic ? "د.ج" : "دج";
             return digits + " " + unit;

@@ -30,7 +30,7 @@ namespace AlgerBusSim.Art
             if (Cache.TryGetValue(key, out cached)) return cached;
 
             string full = Application.streamingAssetsPath + "/" + relative;
-            var request = UnityWebRequestTexture.GetTexture(full, 1024);
+            var request = UnityWebRequestTexture.GetTexture(full);
             var operation = request.SendWebRequest();
             while (!request.isDone) { }
             if (request.result != UnityWebRequest.Result.Success)
@@ -39,13 +39,13 @@ namespace AlgerBusSim.Art
                 return null;
             }
 
-            Texture2D tex = DownloadHandlerTexture.GetContent(request.downloadHandler) as Texture2D;
-            if (tex == null) tex = request.texture;
+            Texture2D tex = null;
+            var handler = request.downloadHandler as DownloadHandlerTexture;
+            if (handler != null) tex = handler.texture;
+            if (tex == null) return null;
             tex.filterMode = FilterMode.Bilinear;
             tex.wrapMode = TextureWrapMode.Repeat;
             tex.anisoLevel = 8;
-            tex.mipChain = true;
-            tex.mipMapPriority = 0;
             Cache[key] = tex;
             return tex;
         }

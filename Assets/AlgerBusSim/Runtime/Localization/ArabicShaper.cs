@@ -78,12 +78,12 @@ namespace AlgerBusSim.Localization
                 int cp = text[i];
                 if (cp == 0x0644 && i + 1 < text.Length && IsLamAlef(text[i + 1]))
                 {
-                    int next = text[i + 1];
-                    int isolated, fin;
-                    int ok = AlgerBusSim.Localization.Generated.ArabicShapingTable.LamAlefLookupRow(next, out isolated, out fin);
-                    int prev = outCp.Count > 0 ? outCp[outCp.Count - 1] : 0;
-                    bool joinedPrev = prev != 0 && JoinsForward(prev);
-                    outCp.Add(joinedPrev ? fin : isolated);
+                    int nextCp = text[i + 1];
+                    int isolated, finVal;
+                    int ok = AlgerBusSim.Localization.Generated.ArabicShapingTable.LamAlefLookupRow(nextCp, out isolated, out finVal);
+                    int prevCp = outCp.Count > 0 ? outCp[outCp.Count - 1] : 0;
+                    bool joinedPrev = prevCp != 0 && JoinsForward(prevCp);
+                    outCp.Add(joinedPrev ? finVal : isolated);
                     i += 2;
                     continue;
                 }

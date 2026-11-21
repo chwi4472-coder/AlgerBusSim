@@ -14,8 +14,8 @@ namespace AlgerBusSim.UI
 
         void Update()
         {
-            if (Input.touchCount == 0) { this.Input = Vector2.zero; return; }
-            foreach (var t in Input.touches)
+            if (UnityEngine.Input.touchCount == 0) { this.Input = Vector2.zero; return; }
+            foreach (var t in UnityEngine.Input.touches)
             {
                 if (t.phase == TouchPhase.Began && this._touchId == -1)
                 {

@@ -34,7 +34,7 @@ namespace AlgerBusSim.Art
             result.ReadPixels(new Rect(0, 0, tex.width, tex.height), 0, 0);
             result.Apply();
             RenderTexture.active = null;
-            RenderTexture.ReleaseRenderTexture(render);
+            RenderTexture.ReleaseTemporary(render);
             return result;
         }
     }
