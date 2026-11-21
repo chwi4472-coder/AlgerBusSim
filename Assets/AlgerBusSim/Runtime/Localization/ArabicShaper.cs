@@ -14,9 +14,6 @@ namespace AlgerBusSim.Localization
         public const int JoinRight = 1;
         public const int JoinDual = 2;
 
-        private static readonly AlgerBusSim.Localization.Generated.ArabicShapingTable Table
-            = new AlgerBusSim.Localization.Generated.ArabicShapingTable();
-
         private static readonly HashSet<int> Tasheel = BuildTasheel();
         private static readonly HashSet<int> LetterSet = BuildLetters();
 
@@ -58,7 +55,7 @@ namespace AlgerBusSim.Localization
 
         private static bool JoinsForward(int cp)
         {
-            int[] t = Table.FormsLookup(cp, out _, out _);
+            int[] t = AlgerBusSim.Localization.Generated.ArabicShapingTable.FormsLookup(cp, out _, out _);
             if (t == null) return false;
             int join = t[5];
             return join == JoinDual;
@@ -66,7 +63,7 @@ namespace AlgerBusSim.Localization
 
         private static bool JoinsBackward(int cp)
         {
-            int[] t = Table.FormsLookup(cp, out _, out _);
+            int[] t = AlgerBusSim.Localization.Generated.ArabicShapingTable.FormsLookup(cp, out _, out _);
             if (t == null) return false;
             int join = t[5];
             return join != JoinNone;
@@ -83,7 +80,7 @@ namespace AlgerBusSim.Localization
                 {
                     int next = text[i + 1];
                     int isolated, fin;
-                    int ok = Table.LamAlefLookupRow(next, out isolated, out fin);
+                    int ok = AlgerBusSim.Localization.Generated.ArabicShapingTable.LamAlefLookupRow(next, out isolated, out fin);
                     int prev = outCp.Count > 0 ? outCp[outCp.Count - 1] : 0;
                     bool joinedPrev = prev != 0 && JoinsForward(prev);
                     outCp.Add(joinedPrev ? fin : isolated);
@@ -91,7 +88,7 @@ namespace AlgerBusSim.Localization
                     continue;
                 }
                 if (Tasheel.Contains(cp)) { outCp.Add(cp); i++; continue; }
-                int[] t = Table.FormsLookup(cp, out int iso, out int fin);
+                int[] t = AlgerBusSim.Localization.Generated.ArabicShapingTable.FormsLookup(cp, out int iso, out int fin);
                 if (t == null) { outCp.Add(cp); i++; continue; }
                 int j = i + 1;
                 while (j < text.Length && Tasheel.Contains(text[j])) j++;

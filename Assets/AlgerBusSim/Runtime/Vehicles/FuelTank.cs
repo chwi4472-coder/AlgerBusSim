@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace AlgerBusSim.Vehicles
 {
     public class FuelTank

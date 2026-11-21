@@ -110,7 +110,7 @@ namespace AlgerBusSim.World
                 else if (r < 0.45f) prop = CreatePrimitive(PrimitiveType.Sphere, pos, new Vector3(0.15f, 0.45f, 0.15f));
                 else if (r < 0.60f) prop = CreatePrimitive(PrimitiveType.Cube, pos, new Vector3(0.35f, 0.25f, 0.35f));
                 else if (r < 0.75f) prop = CreatePrimitive(PrimitiveType.Cylinder, pos, new Vector3(0.06f, 0.9f, 0.06f));
-                else prop = CreatePrimitive(PrimitiveType.Icosahedron, pos, new Vector3(0.35f, 0.5f, 0.35f));
+                else prop = CreatePrimitive(PrimitiveType.Sphere, pos, new Vector3(0.35f, 0.5f, 0.35f));
                 prop.transform.SetParent(go.transform);
                 placed++;
             }
