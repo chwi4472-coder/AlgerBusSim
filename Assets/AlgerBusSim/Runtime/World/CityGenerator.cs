@@ -73,9 +73,18 @@ namespace AlgerBusSim.World
             var mr = go.AddComponent<MeshRenderer>();
             Shader sh = Shader.Find("AlgerBusSim/Unlit/Tilable");
             if (sh == null) sh = Shader.Find("Unlit/Texture");
+            if (sh == null) sh = Shader.Find("Standard");
+            if (sh == null) sh = Shader.Find("Sprites/Default");
             var mat = new Material(sh);
-            mat.SetColor("_Tint", new Color(0.36f, 0.34f, 0.30f, 1f));
-            mat.SetVector("_TileSize", new Vector4(1f, 1f, 0f, 0f));
+            if (sh != null && sh.name == "AlgerBusSim/Unlit/Tilable")
+            {
+                mat.SetColor("_Tint", new Color(0.36f, 0.34f, 0.30f, 1f));
+                mat.SetVector("_TileSize", new Vector4(1f, 1f, 0f, 0f));
+            }
+            else
+            {
+                mat.color = new Color(0.36f, 0.34f, 0.30f, 1f);
+            }
             mr.sharedMaterial = mat;
         }
 
