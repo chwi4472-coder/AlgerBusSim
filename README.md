@@ -44,7 +44,10 @@ break the Android NDK/CMake toolchain. **Before Phase 6, move the folder to an
 ASCII path**, e.g. `C:\Dev\AlgerBusSim`. Nothing in the project depends on its
 location.
 
-## Layout
+## Cloud build (no local Unity)
+
+A real ARM64 APK can be produced for free via GitHub Actions — no Unity install,
+no 20 GB of disk, no Android SDK. See [`CLOUD_BUILD.md`](CLOUD_BUILD.md).
 
 ```
 Assets/AlgerBusSim/Runtime/   game code (Core, World, Vehicles, Gameplay, Traffic, UI, Art, Audio, Data)
