@@ -51,7 +51,10 @@ namespace AlgerBusSim.World
             Vector3 c = new Vector3(2300f, -0.06f, -60f);
             Vector3 d = new Vector3(2300f, -0.06f, -2100f);
             batch.AddGroundQuad(a, b, c, d, 12f);
-            batch.Commit(parent.transform, "GroundSand", WorldMaterials.Sand, false, true);
+            var groundGo = batch.Commit(parent.transform, "GroundSand", WorldMaterials.Sand, false, true);
+            var gc = groundGo.AddComponent<BoxCollider>();
+            gc.center = new Vector3(0f, -0.5f, 0f);
+            gc.size = new Vector3(5000f, 1f, 5000f);
         }
 
         private static void BuildSeaAndQuay(WorldLayout layout, GameObject parent)

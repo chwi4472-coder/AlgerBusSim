@@ -26,7 +26,7 @@ namespace AlgerBusSim.World
             var dome = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             dome.name = "SkyDome";
             dome.transform.SetParent(transform, false);
-            dome.transform.localScale = new Vector3(3000f, 3000f, 3000f);
+            dome.transform.localScale = new Vector3(2500f, 2500f, 2500f);
             UnityEngine.Object.Destroy(dome.GetComponent<Collider>());
             _skyRenderer = dome.GetComponent<MeshRenderer>();
             _skyMat = new Material(Shader.Find("AlgerBusSim/Sky/Dome"));

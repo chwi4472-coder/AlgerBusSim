@@ -182,6 +182,7 @@ namespace AlgerBusSim.Core
         private void EnsureCameraAndLight()
         {
             _cam = Camera.main;
+            if (_cam != null) { _cam.farClipPlane = 4000f; _cam.nearClipPlane = 0.15f; }
             if (_cam == null)
             {
                 var camGo = new GameObject("Main Camera");
@@ -191,7 +192,7 @@ namespace AlgerBusSim.Core
                 _cam.backgroundColor = new Color(0.55f, 0.72f, 0.88f);
                 _cam.fieldOfView = 62f;
                 _cam.nearClipPlane = 0.15f;
-                _cam.farClipPlane = 1800f;
+                _cam.farClipPlane = 4000f;
                 camGo.AddComponent<AudioListener>();
             }
             _cam.transform.position = new Vector3(-200f, 150f, 100f);
