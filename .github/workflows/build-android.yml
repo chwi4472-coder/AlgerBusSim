@@ -45,7 +45,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: Android
-          unityVersion: 6000.6.8f1
+          unityVersion: 6000.6.10f1
           buildMethod: AlgerBusSim.EditorTools.BuildScript.BuildAndroid
           allowDirtyBuild: true
 
