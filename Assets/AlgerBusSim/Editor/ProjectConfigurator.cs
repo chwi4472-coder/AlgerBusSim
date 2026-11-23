@@ -60,7 +60,8 @@ namespace AlgerBusSim.EditorTools
             string[] shaderNames = {
                 "AlgerBusSim/Unlit/Color", "AlgerBusSim/Unlit/Transparent",
                 "AlgerBusSim/Unlit/Tilable", "AlgerBusSim/Unlit/Alpha",
-                "AlgerBusSim/Sky/Dome" };
+                "AlgerBusSim/Sky/Dome",
+                "AlgerBusSim/Post/Composite", "AlgerBusSim/Post/BrightPass", "AlgerBusSim/Post/Blur" };
             foreach (var n in shaderNames)
             {
                 Shader sh = Shader.Find(n);

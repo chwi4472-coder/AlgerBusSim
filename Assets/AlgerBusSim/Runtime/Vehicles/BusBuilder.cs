@@ -39,10 +39,10 @@ namespace AlgerBusSim.Vehicles
         private static void BuildBody(GameObject go)
         {
             var t = go.transform;
-            var white = WorldMaterials.White;
+            var white = WorldMaterials.BusPaint;
             var dark = WorldMaterials.Dark;
             var metal = WorldMaterials.Metal;
-            var glass = WorldMaterials.Glass;
+            var glass = WorldMaterials.BusGlass;
             var teal = WorldMaterials.Solid(Palette.FromHex(Palette.BusStripeTeal), 0.1f);
             var blue = WorldMaterials.Solid(Palette.FromHex(Palette.BusDoorBlue), 0.15f);
             var roofLight = WorldMaterials.Solid(Palette.FromHex(Palette.BusRoofLight), 0.3f);

@@ -65,7 +65,9 @@ namespace AlgerBusSim.World
             Vector3 c = new Vector3(2600f, -0.55f, 1600f);
             Vector3 d = new Vector3(2600f, -0.55f, -58f);
             sea.AddGroundQuad(a, b, c, d, 26f);
-            sea.Commit(parent.transform, "Sea", WorldMaterials.Water, false, false);
+            var seaGo = sea.Commit(parent.transform, "Sea", WorldMaterials.Water, false, false);
+            var wa = seaGo.AddComponent<WaterAnimator>();
+            wa.WaterMaterial = WorldMaterials.Water;
 
             var quay = new MeshBatch();
             quay.AddBox(new Vector3(0f, -0.15f, -59.5f), new Vector3(3600f, 1.1f, 2.2f),

@@ -43,6 +43,17 @@ Shader "AlgerBusSim/Sky/Dome"
                     float t = pow(-y, 0.6);
                     col = lerp(_HorizonColor, _GroundColor, t);
                 }
+                // procedural clouds
+                float2 cuv = i.worldDir.xz / max(i.worldDir.y + 0.15, 0.05) * 0.6;
+                float cloud = 0;
+                float2 p = cuv * 1.2;
+                cloud += 0.5 * (sin(p.x * 1.7 + sin(p.y * 2.3)) * 0.5 + 0.5);
+                p = cuv * 2.5 + float2(3.1, 1.7);
+                cloud += 0.3 * (sin(p.x * 2.1 + sin(p.y * 1.9 + 2.0)) * 0.5 + 0.5);
+                p = cuv * 5.0 + float2(7.3, 4.1);
+                cloud += 0.2 * (sin(p.x * 1.3 + sin(p.y * 2.7 + 1.0)) * 0.5 + 0.5);
+                cloud = smoothstep(0.55, 0.85, cloud) * saturate(i.worldDir.y * 3.0);
+                col.rgb = lerp(col.rgb, float3(1, 1, 1) * _Exposure, cloud * 0.55);
                 // sun
                 float sunDot = saturate(dot(i.worldDir, _SunDir));
                 float sun = pow(sunDot, 1.0 / max(_SunSize, 0.001));

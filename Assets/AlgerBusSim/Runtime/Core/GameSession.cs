@@ -7,6 +7,7 @@ using AlgerBusSim.Art;
 using AlgerBusSim.Data;
 using AlgerBusSim.World;
 using AlgerBusSim.Player;
+using AlgerBusSim.Rendering;
 using AlgerBusSim.Vehicles;
 using AlgerBusSim.Traffic;
 using AlgerBusSim.Audio;
@@ -59,6 +60,11 @@ namespace AlgerBusSim.Core
             Screen.orientation = ScreenOrientation.LandscapeLeft;
             Input.multiTouchEnabled = true;
             Diagnostics.Start();
+            QualitySettings.shadowResolution = ShadowResolution.VeryHigh;
+            QualitySettings.shadowDistance = 160f;
+            QualitySettings.shadowCascades = 4;
+            QualitySettings.shadowProjection = ShadowProjection.StableFit;
+            QualitySettings.antiAliasing = 4;
             QualityTierProvider.Current = (QualityTier)Diagnostics.QualityTier;
             StartCoroutine(Boot());
         }
@@ -196,6 +202,7 @@ namespace AlgerBusSim.Core
                 camGo.AddComponent<AudioListener>();
             }
             _cam.transform.position = new Vector3(-200f, 150f, 100f);
+            if (_cam.GetComponent<PostEffects>() == null) _cam.gameObject.AddComponent<PostEffects>();
 
             _sun = FindAnyObjectByType<Light>();
             if (_sun == null)

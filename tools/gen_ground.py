@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw, ImageFilter
 
 import artlib as A
 
-TILE = 512
+TILE = 1024
 
 
 def asphalt(seed=1):

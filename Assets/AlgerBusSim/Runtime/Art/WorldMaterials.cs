@@ -23,6 +23,8 @@ namespace AlgerBusSim.Art
         public static Material Metal;
         public static Material Dark;
         public static Material White;
+        public static Material BusPaint;
+        public static Material BusGlass;
         public static Material Concrete;
         public static Material LampOff;
         public static Material LampOn;
@@ -93,6 +95,8 @@ namespace AlgerBusSim.Art
             Metal = Solid(Palette.FromHex(Palette.Steel), 0.55f, 0.4f);
             Dark = Solid(new Color(0.10f, 0.11f, 0.12f), 0.2f);
             White = Solid(new Color(0.95f, 0.94f, 0.90f), 0.1f);
+            BusPaint = Lit(null, new Color(0.96f, 0.95f, 0.92f), 0.78f, 0.45f);
+            BusGlass = Lit(null, Palette.FromHex(Palette.GlassBottom), 0.92f, 0.65f);
             Concrete = Solid(new Color(0.66f, 0.64f, 0.60f), 0.1f);
             LampOff = Solid(new Color(0.22f, 0.22f, 0.24f), 0.3f);
             LampOn = Emissive(new Color(0.22f, 0.22f, 0.24f), new Color(1f, 0.82f, 0.45f) * 2.2f);
