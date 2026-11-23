@@ -1,43 +1,120 @@
 {
   "nodes": [
-    { "id": "n001", "x": -1150.0, "z": -300.0, "y": 0.0, "kind": "terminal" },
-    { "id": "n002", "x": -650.0, "z": -300.0, "y": 0.0, "kind": "junction" },
-    { "id": "n003", "x": -60.0, "z": -150.0, "y": 0.0, "kind": "junction" },
-    { "id": "n004", "x": 420.0, "z": -180.0, "y": 0.0, "kind": "junction" },
-    { "id": "n005", "x": -320.0, "z": -520.0, "y": 0.0, "kind": "junction" },
-    { "id": "n006", "x": -150.0, "z": -650.0, "y": 0.0, "kind": "junction" },
-    { "id": "n007", "x": -1000.0, "z": -560.0, "y": 0.0, "kind": "market" },
-    { "id": "n009", "x": 900.0, "z": -500.0, "y": 0.0, "kind": "port" }
+    { "id": "c1", "x": -1500.0, "z": -140.0, "y": 0.0, "kind": "terminal" },
+    { "id": "c2", "x": -1100.0, "z": -140.0, "y": 0.0, "kind": "junction" },
+    { "id": "c3", "x": -750.0,  "z": -140.0, "y": 0.0, "kind": "junction" },
+    { "id": "c4", "x": -400.0,  "z": -140.0, "y": 0.0, "kind": "junction" },
+    { "id": "c5", "x": 0.0,     "z": -140.0, "y": 0.0, "kind": "junction" },
+    { "id": "c6", "x": 400.0,   "z": -140.0, "y": 0.0, "kind": "junction" },
+    { "id": "c7", "x": 800.0,   "z": -140.0, "y": 0.0, "kind": "junction" },
+    { "id": "c8", "x": 1200.0,  "z": -140.0, "y": 0.0, "kind": "junction" },
+    { "id": "c9", "x": 1600.0,  "z": -140.0, "y": 0.0, "kind": "terminal" },
+
+    { "id": "r1", "x": -1300.0, "z": -400.0, "y": 0.0, "kind": "junction" },
+    { "id": "r2", "x": -950.0,  "z": -400.0, "y": 0.0, "kind": "junction" },
+    { "id": "r3", "x": -600.0,  "z": -400.0, "y": 0.0, "kind": "junction" },
+    { "id": "r4", "x": -250.0,  "z": -400.0, "y": 0.0, "kind": "junction" },
+    { "id": "r5", "x": 100.0,   "z": -400.0, "y": 0.0, "kind": "junction" },
+    { "id": "r6", "x": 450.0,   "z": -400.0, "y": 0.0, "kind": "junction" },
+    { "id": "r7", "x": 800.0,   "z": -400.0, "y": 0.0, "kind": "junction" },
+    { "id": "r8", "x": 1150.0,  "z": -400.0, "y": 0.0, "kind": "junction" },
+
+    { "id": "s1", "x": -1150.0, "z": -680.0, "y": 0.0, "kind": "junction" },
+    { "id": "s2", "x": -800.0,  "z": -680.0, "y": 0.0, "kind": "junction" },
+    { "id": "s3", "x": -450.0,  "z": -680.0, "y": 0.0, "kind": "junction" },
+    { "id": "s4", "x": -100.0,  "z": -680.0, "y": 0.0, "kind": "junction" },
+    { "id": "s5", "x": 250.0,   "z": -680.0, "y": 0.0, "kind": "junction" },
+    { "id": "s6", "x": 600.0,   "z": -680.0, "y": 0.0, "kind": "junction" },
+    { "id": "s7", "x": 950.0,   "z": -680.0, "y": 0.0, "kind": "junction" },
+    { "id": "s8", "x": 1300.0,  "z": -680.0, "y": 0.0, "kind": "junction" },
+
+    { "id": "t1", "x": -950.0,  "z": -950.0, "y": 0.0, "kind": "junction" },
+    { "id": "t2", "x": -550.0,  "z": -950.0, "y": 0.0, "kind": "junction" },
+    { "id": "t3", "x": -150.0,  "z": -950.0, "y": 0.0, "kind": "junction" },
+    { "id": "t4", "x": 250.0,   "z": -950.0, "y": 0.0, "kind": "junction" },
+    { "id": "t5", "x": 650.0,   "z": -950.0, "y": 0.0, "kind": "junction" },
+    { "id": "t6", "x": 1050.0,  "z": -950.0, "y": 0.0, "kind": "junction" },
+    { "id": "t7", "x": 1400.0,  "z": -950.0, "y": 0.0, "kind": "junction" }
   ],
   "edges": [
-    {
-      "id": "e001", "from": "n001", "to": "n002",
-      "lanes": 2, "width": 7.0, "kind": "arterial",
-      "speedLimit": 50, "oneway": false, "profile": "urban",
-      "sidewalk": 2.5, "parking": true
-    },
-    {
-      "id": "e002", "from": "n002", "to": "n003",
-      "lanes": 2, "width": 7.0, "kind": "arterial",
-      "speedLimit": 50, "oneway": false, "profile": "urban",
-      "sidewalk": 2.5, "parking": true
-    },
-    {
-      "id": "e003", "from": "n003", "to": "n004",
-      "lanes": 2, "width": 7.5, "kind": "arterial",
-      "speedLimit": 50, "oneway": false, "profile": "urban",
-      "sidewalk": 2.5, "parking": true
-    },
-    {
-      "id": "e004", "from": "n002", "to": "n005",
-      "lanes": 2, "width": 6.5, "kind": "collector",
-      "speedLimit": 40, "oneway": false, "profile": "urban",
-      "sidewalk": 2.0, "parking": false
-    }
+    { "id": "e01", "from": "c1", "to": "c2", "lanes": 2, "width": 9.0, "kind": "boulevard", "speedLimit": 60, "oneway": false, "profile": "urban", "sidewalk": 3.0, "parking": false,
+      "control": [ { "x": -1350.0, "z": -125.0 }, { "x": -1200.0, "z": -130.0 } ] },
+    { "id": "e02", "from": "c2", "to": "c3", "lanes": 2, "width": 9.0, "kind": "boulevard", "speedLimit": 60, "oneway": false, "profile": "urban", "sidewalk": 3.0, "parking": false,
+      "control": [ { "x": -1000.0, "z": -150.0 }, { "x": -850.0, "z": -135.0 } ] },
+    { "id": "e03", "from": "c3", "to": "c4", "lanes": 2, "width": 9.0, "kind": "boulevard", "speedLimit": 60, "oneway": false, "profile": "urban", "sidewalk": 3.0, "parking": false,
+      "control": [ { "x": -650.0, "z": -125.0 }, { "x": -500.0, "z": -150.0 } ] },
+    { "id": "e04", "from": "c4", "to": "c5", "lanes": 2, "width": 9.0, "kind": "boulevard", "speedLimit": 60, "oneway": false, "profile": "urban", "sidewalk": 3.0, "parking": false,
+      "control": [ { "x": -300.0, "z": -160.0 }, { "x": -150.0, "z": -125.0 } ] },
+    { "id": "e05", "from": "c5", "to": "c6", "lanes": 2, "width": 9.0, "kind": "boulevard", "speedLimit": 60, "oneway": false, "profile": "urban", "sidewalk": 3.0, "parking": false,
+      "control": [ { "x": 150.0, "z": -125.0 }, { "x": 300.0, "z": -160.0 } ] },
+    { "id": "e06", "from": "c6", "to": "c7", "lanes": 2, "width": 9.0, "kind": "boulevard", "speedLimit": 60, "oneway": false, "profile": "urban", "sidewalk": 3.0, "parking": false,
+      "control": [ { "x": 550.0, "z": -150.0 }, { "x": 700.0, "z": -125.0 } ] },
+    { "id": "e07", "from": "c7", "to": "c8", "lanes": 2, "width": 9.0, "kind": "boulevard", "speedLimit": 60, "oneway": false, "profile": "urban", "sidewalk": 3.0, "parking": false,
+      "control": [ { "x": 900.0, "z": -135.0 }, { "x": 1050.0, "z": -150.0 } ] },
+    { "id": "e08", "from": "c8", "to": "c9", "lanes": 2, "width": 9.0, "kind": "boulevard", "speedLimit": 60, "oneway": false, "profile": "urban", "sidewalk": 3.0, "parking": false,
+      "control": [ { "x": 1350.0, "z": -125.0 }, { "x": 1500.0, "z": -130.0 } ] },
+
+    { "id": "e10", "from": "r1", "to": "r2", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e11", "from": "r2", "to": "r3", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e12", "from": "r3", "to": "r4", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e13", "from": "r4", "to": "r5", "lanes": 2, "width": 8.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e14", "from": "r5", "to": "r6", "lanes": 2, "width": 8.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e15", "from": "r6", "to": "r7", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e16", "from": "r7", "to": "r8", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+
+    { "id": "e20", "from": "s1", "to": "s2", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e21", "from": "s2", "to": "s3", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e22", "from": "s3", "to": "s4", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e23", "from": "s4", "to": "s5", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e24", "from": "s5", "to": "s6", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e25", "from": "s6", "to": "s7", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e26", "from": "s7", "to": "s8", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+
+    { "id": "e30", "from": "t1", "to": "t2", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e31", "from": "t2", "to": "t3", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e32", "from": "t3", "to": "t4", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e33", "from": "t4", "to": "t5", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e34", "from": "t5", "to": "t6", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e35", "from": "t6", "to": "t7", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+
+    { "id": "e40", "from": "c1", "to": "r1", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e41", "from": "c2", "to": "r2", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e42", "from": "c3", "to": "r3", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e43", "from": "c4", "to": "r4", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e44", "from": "c5", "to": "r5", "lanes": 2, "width": 8.5, "kind": "boulevard", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 3.0, "parking": false,
+      "control": [ { "x": 20.0, "z": -250.0 }, { "x": 80.0, "z": -320.0 } ] },
+    { "id": "e45", "from": "c6", "to": "r6", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e46", "from": "c7", "to": "r7", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+    { "id": "e47", "from": "c8", "to": "r8", "lanes": 2, "width": 7.0, "kind": "street", "speedLimit": 50, "oneway": false, "profile": "urban", "sidewalk": 2.5, "parking": true },
+
+    { "id": "e50", "from": "r1", "to": "s1", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e51", "from": "r2", "to": "s2", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e52", "from": "r3", "to": "s3", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e53", "from": "r4", "to": "s4", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e54", "from": "r5", "to": "s5", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e55", "from": "r6", "to": "s6", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e56", "from": "r7", "to": "s7", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+    { "id": "e57", "from": "r8", "to": "s8", "lanes": 2, "width": 6.5, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.2, "parking": true },
+
+    { "id": "e60", "from": "s1", "to": "t1", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e61", "from": "s2", "to": "t2", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e62", "from": "s3", "to": "t3", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e63", "from": "s4", "to": "t3", "lanes": 2, "width": 5.5, "kind": "street", "speedLimit": 30, "oneway": false, "profile": "urban", "sidewalk": 1.8, "parking": false },
+    { "id": "e64", "from": "s5", "to": "t4", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e65", "from": "s6", "to": "t5", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e66", "from": "s7", "to": "t6", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+    { "id": "e67", "from": "s8", "to": "t7", "lanes": 2, "width": 6.0, "kind": "street", "speedLimit": 40, "oneway": false, "profile": "urban", "sidewalk": 2.0, "parking": false },
+
+    { "id": "e70", "from": "c2", "to": "r1", "lanes": 2, "width": 5.5, "kind": "street", "speedLimit": 30, "oneway": false, "profile": "urban", "sidewalk": 1.8, "parking": false },
+    { "id": "e71", "from": "c4", "to": "r3", "lanes": 2, "width": 5.5, "kind": "street", "speedLimit": 30, "oneway": false, "profile": "urban", "sidewalk": 1.8, "parking": false }
   ],
   "stops": [
-    { "id": "s01", "edge": "e001", "t": 0.0, "name": { "fr": "Bab El Oued", "ar": "باب الوادي", "dz": "باب الوادي" } },
-    { "id": "s02", "edge": "e002", "t": 0.45, "name": { "fr": "Martyrs Square", "ar": "ساحة الشهداء", "dz": "ساحة الشهداء" } },
-    { "id": "s03", "edge": "e003", "t": 0.8, "name": { "fr": "Grande Poste", "ar": "الملك كمال", "dz": "الملك كمال" } }
+    { "id": "s01", "edge": "e02", "t": 0.30, "name": { "fr": "Bab El Oued", "ar": "باب الوادي", "dz": "باب الوادي" } },
+    { "id": "s02", "edge": "e03", "t": 0.55, "name": { "fr": "Casbah", "ar": "القصبة", "dz": "القصبة" } },
+    { "id": "s03", "edge": "e04", "t": 0.55, "name": { "fr": "Place des Martyrs", "ar": "ساحة الشهداء", "dz": "ساحة الشهداء" } },
+    { "id": "s04", "edge": "e05", "t": 0.50, "name": { "fr": "Grande Poste", "ar": "البريد المركزي", "dz": "البريد المركزي" } },
+    { "id": "s05", "edge": "e06", "t": 0.40, "name": { "fr": "Port d'Alger", "ar": "ميناء الجزائر", "dz": "ميناء الجزائر" } },
+    { "id": "s06", "edge": "e07", "t": 0.50, "name": { "fr": "Hussein Dey", "ar": "حسين داي", "dz": "حسين داي" } },
+    { "id": "s07", "edge": "e08", "t": 0.60, "name": { "fr": "El Harrach", "ar": "الحراش", "dz": "الحراش" } }
   ]
 }

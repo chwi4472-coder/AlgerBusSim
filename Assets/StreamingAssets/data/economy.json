@@ -4,6 +4,9 @@
   "intercityFareDzdPerKm": 2.5,
   "fuelDzdPerL": 29.01,
   "driverSalaryDzdPerMonth": 45000,
+  "startingCashDzd": 25000,
+  "stopBonusDzd": 350,
+  "punctualityBonusDzd": 500,
   "busPriceDzd": { "urban_12m": 14500000, "coach_intercity": 32000000 },
   "penalties": {
     "redLightDzd": 4000,

@@ -1,18 +1,65 @@
 app_title,AlgerBusSim
-app_subtitle,La simulation de bus
-bus_stop,Arret de bus
-passenger,Pasager
-money,Solde
+app_subtitle,Simulateur de bus — Alger
+start_service,Commencer le service
+continue_service,Continuer
+menu_language,Langue
+menu_quality,Qualité
+quality_high,Élevée
+quality_low,Légère
+loading,Chargement…
+loading_city,Chargement d'Alger…
+loading_art,Préparation des quartiers…
+route,Ligne
+destination,Destination
+next_stop,Prochain arrêt
+stop_distance,Distance
+passengers,Voyageurs
+money,Recette
 fuel,Carburant
 clock,Heure
-door,Porte
-ticket,Billet
-star,Etoile
-flag,Drapeau
-panel,Panneau
-road,Route
-city,Ville
-drive,Conduite
-trip,Semestre
-fares,Fares
-payback,Remboursement
+gear,Rapport
+speed,Vitesse
+doors_open,Ouvrir les portes
+doors_close,Fermer les portes
+horn,Klaxon
+camera,Caméra
+pause,Pause
+resume,Reprendre
+restart,Recommencer
+quit,Quitter
+arrived_stop,Arrêt atteint
+open_doors_hint,Ouvrez les portes pour la montée
+close_doors_hint,Fermez les portes pour repartir
+boarding,Montée
+alighting,Descente
+stop_served,Arrêt desservi
+drive_to_stop,Roulez jusqu'à l'arrêt
+service_ended,Service terminé
+total_earnings,Recette du service
+passengers_carried,Voyageurs transportés
+punctuality,Ponctualité
+stops_served,Arrêts desservis
+restart_service,Nouveau service
+penalty_red_light,Feu rouge grillé
+penalty_speeding,Excès de vitesse
+penalty_missed_stop,Arrêt manqué
+bonus_punctual,Bonus de ponctualité
+weather_clear,Ciel dégagé
+weather_rain,Pluie
+weather_fog,Brume
+low_fuel,Carburant faible
+tutorial_drive,Accélérez avec la pédale de droite
+tutorial_stop,Arrêtez-vous à l'arrêt et ouvrez les portes
+language_fr,Français
+language_ar,Arabe
+language_dz,Darja
+bus_stop,Arrêt de bus
+ticket_price,Ticket urbain
+pause_title,Service en pause
+back_to_menu,Retour au menu
+day,Jour
+km,km
+min,min
+dzd,DA
+service_active,Service en cours
+new_record,Nouveau record

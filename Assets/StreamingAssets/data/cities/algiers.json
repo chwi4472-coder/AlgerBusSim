@@ -2,22 +2,28 @@
   "id": "algiers",
   "slug": "algiers",
   "name": { "fr": "Alger", "ar": "الجزائر", "dz": "الجزائر" },
-  "boundsHalfWidthKm": 2.8,
-  "boundsHalfDepthKm": 2.8,
-  "startNodeId": "n001",
-  "endNodeId": "n004",
+  "boundsHalfWidthKm": 3.2,
+  "boundsHalfDepthKm": 1.6,
+  "startNodeId": "c2",
+  "endNodeId": "c9",
   "timeZoneOffsetHours": 1,
   "districts": [
     { "id": "bab_el_oued", "name": { "fr": "Bab El Oued", "ar": "باب الوادي", "dz": "باب الوادي" }, "kind": 0 },
-    { "id": "alger_centre", "name": { "fr": "Alger Centre", "ar": "الجزائر الوسطى", "dz": "الجزائر الوسطى" }, "kind": 1 },
-    { "id": "el_harrach", "name": { "fr": "El Harrach", "ar": "محافظة الحاجز", "dz": "الحاجز" }, "kind": 3 },
-    { "id": "hydra", "name": { "fr": "Hydra", "ar": "حيدرة", "dz": "حيدرة" }, "kind": 2 },
-    { "id": "kouba", "name": { "fr": "Al Kouba", "ar": "الكوبر", "dz": "الكوبر" }, "kind": 4 }
+    { "id": "casbah", "name": { "fr": "Casbah", "ar": "القصبة", "dz": "القصبة" }, "kind": 1 },
+    { "id": "alger_centre", "name": { "fr": "Alger Centre", "ar": "الجزائر الوسطى", "dz": "الجزائر الوسطى" }, "kind": 2 },
+    { "id": "hussein_dey", "name": { "fr": "Hussein Dey", "ar": "حسين داي", "dz": "حسين داي" }, "kind": 3 },
+    { "id": "el_harrach", "name": { "fr": "El Harrach", "ar": "الحراش", "dz": "الحراش" }, "kind": 4 },
+    { "id": "hydra", "name": { "fr": "Hydra", "ar": "حيدرة", "dz": "حيدرة" }, "kind": 5 },
+    { "id": "kouba", "name": { "fr": "Kouba", "ar": "القبة", "dz": "القبة" }, "kind": 6 }
   ],
   "landmarks": [
-    { "id": "grande_poste", "districtId": "alger_centre", "nodeId": "n004", "kind": "neo_mauritsian" },
-    { "id": "martyrs_square", "districtId": "alger_centre", "nodeId": "n003", "kind": "modern" },
-    { "id": "bab_el_oued_market", "districtId": "bab_el_oued", "nodeId": "n007", "kind": "market" },
-    { "id": "port_crates", "districtId": "el_harrach", "nodeId": "n009", "kind": "port" }
+    { "id": "bab_el_oued_market", "districtId": "bab_el_oued", "nodeId": "c2", "kind": "market" },
+    { "id": "casbah_quarter", "districtId": "casbah", "nodeId": "c3", "kind": "casbah" },
+    { "id": "martyrs_square", "districtId": "alger_centre", "nodeId": "c5", "kind": "martyrs" },
+    { "id": "grande_poste", "districtId": "alger_centre", "nodeId": "r5", "kind": "neo_mauritsian" },
+    { "id": "port", "districtId": "alger_centre", "nodeId": "c7", "kind": "port" },
+    { "id": "el_harrach_market", "districtId": "el_harrach", "nodeId": "c9", "kind": "market" },
+    { "id": "hydra_hills", "districtId": "hydra", "nodeId": "t5", "kind": "hills" },
+    { "id": "kouba_residential", "districtId": "kouba", "nodeId": "t3", "kind": "residential" }
   ]
 }

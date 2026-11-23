@@ -1,18 +1,65 @@
-app_title,البوابة
-app_subtitle,محاكاة الحافلات
-bus_stop,محطة الحافلات
-passenger,راكب
-money,الرصيد
+app_title,AlgerBusSim
+app_subtitle,محاكاة الحافلة — الجزائر
+start_service,بدء الخدمة
+continue_service,متابعة
+menu_language,اللغة
+menu_quality,الجودة
+quality_high,عالية
+quality_low,خفيفة
+loading,جار التحميل…
+loading_city,جار تحميل الجزائر…
+loading_art,تحضير الأحياء…
+route,الخط
+destination,الوجهة
+next_stop,المحطة القادمة
+stop_distance,المسافة
+passengers,الركاب
+money,المدخول
 fuel,الوقود
 clock,الساعة
-door,الباب
-ticket,التذكرة
-star,النجمة
-flag,العلم
-panel,لوحة
-road,الطريق
-city,المدينة
-drive,القيادة
-trip,الرحلة
-fares,الأجور
-payback,التحويل
+gear,الترس
+speed,السرعة
+doors_open,فتح الأبواب
+doors_close,إغلاق الأبواب
+horn,المنبه
+camera,الكاميرا
+pause,توقف
+resume,متابعة
+restart,إعادة
+quit,خروج
+arrived_stop,وصلت إلى المحطة
+open_doors_hint,افتح الأبواب ليصعد الركاب
+close_doors_hint,أغلق الأبواب للانطلاق
+boarding,صعود
+alighting,نزول
+stop_served,محطة تمت خدمتها
+drive_to_stop,قد حتى المحطة
+service_ended,انتهت الخدمة
+total_earnings,مدخول الخدمة
+passengers_carried,الركاب المنقولون
+punctuality,الالتزام بالوقت
+stops_served,المحطات المخدومة
+restart_service,خدمة جديدة
+penalty_red_light,تجاوز الضوء الأحمر
+penalty_speeding,تجاوز السرعة
+penalty_missed_stop,محطة فائتة
+bonus_punctual,مكافأة الالتزام بالوقت
+weather_clear,سماء صافية
+weather_rain,مطر
+weather_fog,ضباب
+low_fuel,الوقود منخفض
+tutorial_drive,أسرع بالدواسة اليمنى
+tutorial_stop,توقف عند المحطة وافتح الأبواب
+language_fr,الفرنسية
+language_ar,العربية
+language_dz,الدارجة
+bus_stop,محطة الحافلات
+ticket_price,تذكرة حضرية
+pause_title,الخدمة متوقفة
+back_to_menu,العودة إلى القائمة
+day,اليوم
+km,كم
+min,د
+dzd,د.ج
+service_active,الخدمة جارية
+new_record,رقم قياسي جديد

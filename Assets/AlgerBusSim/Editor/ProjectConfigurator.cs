@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Build;
 using UnityEngine;
@@ -50,6 +51,27 @@ namespace AlgerBusSim.EditorTools
 
             // --- Textures: ASTC keeps the atlas budget inside mobile VRAM ---
             EditorUserBuildSettings.androidBuildSubtarget = MobileTextureSubtarget.ASTC;
+
+            // Ensure our custom shaders are included in the player build by
+            // creating material assets under Resources that reference them.
+            string resDir = "Assets/Resources/Shaders";
+            if (!AssetDatabase.IsValidFolder("Assets/Resources")) AssetDatabase.CreateFolder("Assets", "Resources");
+            if (!AssetDatabase.IsValidFolder(resDir)) AssetDatabase.CreateFolder("Assets/Resources", "Shaders");
+            string[] shaderNames = {
+                "AlgerBusSim/Unlit/Color", "AlgerBusSim/Unlit/Transparent",
+                "AlgerBusSim/Unlit/Tilable", "AlgerBusSim/Unlit/Alpha",
+                "AlgerBusSim/Sky/Dome" };
+            foreach (var n in shaderNames)
+            {
+                Shader sh = Shader.Find(n);
+                if (sh == null) continue;
+                string matPath = resDir + "/" + n.Replace("/", "_") + ".mat";
+                if (AssetDatabase.LoadAssetAtPath<Material>(matPath) == null)
+                {
+                    var mat = new Material(sh);
+                    AssetDatabase.CreateAsset(mat, matPath);
+                }
+            }
 
             AssetDatabase.SaveAssets();
             Debug.Log($"[AlgerBusSim] Project configured: {PackageId} · IL2CPP · ARM64 · ASTC · Vulkan/GLES3");

@@ -54,6 +54,13 @@ namespace AlgerBusSim.Data
     }
 
     [Serializable]
+    public class Vec2
+    {
+        public float x;
+        public float z;
+    }
+
+    [Serializable]
     public class RoadEdge
     {
         public string id;
@@ -67,6 +74,7 @@ namespace AlgerBusSim.Data
         public string profile;
         public float sidewalk;
         public bool parking;
+        public List<Vec2> control;
     }
 
     [Serializable]
@@ -84,5 +92,48 @@ namespace AlgerBusSim.Data
         public List<RoadNode> nodes;
         public List<RoadEdge> edges;
         public List<Stop> stops;
+    }
+
+    [Serializable]
+    public class TimetableData
+    {
+        public int headwayMin;
+        public int firstDepartureHour;
+        public int lastDepartureHour;
+        public int[] scheduleMin;
+    }
+
+    [Serializable]
+    public class RouteData
+    {
+        public string id;
+        public string cityId;
+        public CityName name;
+        public string startNodeId;
+        public string endNodeId;
+        public List<string> stops;
+        public TimetableData timetable;
+    }
+
+    [Serializable]
+    public class PenaltiesData
+    {
+        public int redLightDzd;
+        public int speedingDzd;
+        public int missedStopDzd;
+    }
+
+    [Serializable]
+    public class EconomyData
+    {
+        public string currency;
+        public int urbanTicketDzd;
+        public float intercityFareDzdPerKm;
+        public float fuelDzdPerL;
+        public int driverSalaryDzdPerMonth;
+        public int startingCashDzd;
+        public int stopBonusDzd;
+        public int punctualityBonusDzd;
+        public PenaltiesData penalties;
     }
 }

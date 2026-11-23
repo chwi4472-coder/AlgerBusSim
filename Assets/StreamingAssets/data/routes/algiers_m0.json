@@ -1,13 +1,14 @@
 {
   "id": "algiers_m0",
   "cityId": "algiers",
-  "name": { "fr": "Bab El Oued → Alger Centre", "ar": "باب الوادي → الجزائر الوسطى", "dz": "باب الوادي → الجزائر الوسطى" },
-  "startNodeId": "n001",
-  "endNodeId": "n004",
-  "stops": [ "s01", "s02", "s03" ],
+  "name": { "fr": "Bab El Oued → El Harrach", "ar": "باب الوادي → الحراش", "dz": "باب الوادي → الحراش" },
+  "startNodeId": "c2",
+  "endNodeId": "c9",
+  "stops": [ "s01", "s02", "s03", "s04", "s05", "s06", "s07" ],
   "timetable": {
-    "headwayMin": 12,
+    "headwayMin": 10,
     "firstDepartureHour": 5,
-    "lastDepartureHour": 22
+    "lastDepartureHour": 22,
+    "scheduleMin": [ 0, 4, 8, 13, 18, 24, 30 ]
   }
 }
