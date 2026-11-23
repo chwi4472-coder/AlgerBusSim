@@ -123,7 +123,7 @@ namespace AlgerBusSim.World
                                      List<Vector3> pts, float length, float half, float sw,
                                      int side, float setback, bool shops)
         {
-            float margin = 16f;
+            float margin = 6f;
             float dist = margin + (float)rng.NextDouble() * 4f;
             float end = length - margin;
 
@@ -255,6 +255,41 @@ namespace AlgerBusSim.World
             {
                 batches.Trim.AddBox(center + rot * new Vector3(0f, height + 1.7f, 0f),
                     new Vector3(2.6f, 2.4f, 2.6f), rot, Vector2.one);
+            }
+
+            // Algerian blue/green shutters on street facade
+            if (streetFront && district <= 4)
+            {
+                int floors = Mathf.FloorToInt(height / 3.2f);
+                for (int f = 1; f < floors; f++)
+                {
+                    if (rng.NextDouble() > 0.5) continue;
+                    float y = f * 3.2f + 1.6f;
+                    float frontZ = depth * 0.5f + 0.06f;
+                    int nWin = Mathf.Max(1, Mathf.FloorToInt(width / 3f));
+                    for (int wI = 0; wI < nWin; wI++)
+                    {
+                        if (rng.NextDouble() > 0.6) continue;
+                        float wx = -width * 0.5f + 1.5f + wI * 3f;
+                        var shutterMat = (rng.NextDouble() < 0.5) ? batches.AwningBlue : batches.AwningGreen;
+                        shutterMat.AddBox(center + rot * new Vector3(wx - 0.55f, y, frontZ),
+                            new Vector3(0.5f, 1.2f, 0.05f), rot, Vector2.one);
+                        shutterMat.AddBox(center + rot * new Vector3(wx + 0.55f, y, frontZ),
+                            new Vector3(0.5f, 1.2f, 0.05f), rot, Vector2.one);
+                    }
+                }
+            }
+
+            // satellite dishes on roof (very Algerian)
+            if (rng.NextDouble() < 0.55)
+            {
+                Vector3 dishPos = center + rot * new Vector3(
+                    (float)(rng.NextDouble() - 0.5) * (width - 2f),
+                    height + 1.0f,
+                    (float)(rng.NextDouble() - 0.5) * (depth - 2f));
+                batches.Metal.AddCylinder(dishPos, 0.04f, 0.8f, 5, rot, Vector2.one, false);
+                batches.Metal.AddDisc(dishPos + rot * Vector3.up * 0.8f, 0.45f, 8,
+                    Quaternion.Euler(60f, 0f, 0f) * rot, Vector2.one, true);
             }
 
             // tiled roofs on the low hillside houses

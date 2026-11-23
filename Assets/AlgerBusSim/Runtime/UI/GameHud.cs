@@ -130,6 +130,10 @@ namespace AlgerBusSim.UI
             hb.normalColor = new Color(0.18f, 0.20f, 0.28f, 0.85f);
             hb.pressedColor = new Color(0.3f, 0.32f, 0.4f, 0.95f);
 
+            // Gear mode button (D/N/R)
+            var gearBtn = UiFactory.Button(_root.transform, "GearBtn", "D/N/R", new Vector2(110, 50), new Vector2(-310, 150), new Color(0.18f, 0.20f, 0.28f, 0.85f), Color.white, 14, () => { if (GameSession.Instance.Controller != null) GameSession.Instance.Controller.Powertrain.Mode = GameSession.Instance.Controller.Powertrain.Mode == AlgerBusSim.Vehicles.DriveMode.Drive ? AlgerBusSim.Vehicles.DriveMode.Neutral : (GameSession.Instance.Controller.Powertrain.Mode == AlgerBusSim.Vehicles.DriveMode.Neutral ? AlgerBusSim.Vehicles.DriveMode.Reverse : AlgerBusSim.Vehicles.DriveMode.Drive); });
+            var gbrt = gearBtn.GetComponent<RectTransform>(); gbrt.anchorMin = new Vector2(1, 0); gbrt.anchorMax = new Vector2(1, 0); gbrt.pivot = new Vector2(1, 0);
+
             // Camera button
             var camBtn = UiFactory.Button(_root.transform, "CamBtn", "CAM", new Vector2(80, 50), new Vector2(-260, 150), new Color(0.18f, 0.20f, 0.28f, 0.85f), Color.white, 14, () => { if (GameSession.Instance.ChaseCam != null) GameSession.Instance.ChaseCam.Enabled = !GameSession.Instance.ChaseCam.Enabled; });
             var cbrt = camBtn.GetComponent<RectTransform>(); cbrt.anchorMin = new Vector2(1, 0); cbrt.anchorMax = new Vector2(1, 0); cbrt.pivot = new Vector2(1, 0);
