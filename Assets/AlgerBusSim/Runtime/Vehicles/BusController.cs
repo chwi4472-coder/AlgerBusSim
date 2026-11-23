@@ -78,7 +78,7 @@ namespace AlgerBusSim.Vehicles
 
         void FixedUpdate()
         {
-            _speedMs = _rb != null ? Vector3.Dot(_rb.velocity, transform.forward) : 0f;
+            _speedMs = _rb != null ? Vector3.Dot(_rb.linearVelocity, transform.forward) : 0f;
 
             float speedKmh = Mathf.Abs(_speedMs) * 3.6f;
             float steerAngle = InputRouter.Steer * MaxSteerAngle * Mathf.Clamp01(1f - speedKmh / 120f);
@@ -133,7 +133,10 @@ namespace AlgerBusSim.Vehicles
             float ratio = Powertrain.Mode == DriveMode.Reverse ? 3.4f
                 : Powertrain.GearRatios[Mathf.Clamp(Powertrain.GearIndex, 0, Powertrain.GearRatios.Length - 1)];
             if (Powertrain.Mode == DriveMode.Neutral) return 0f;
-            return Powertrain.TorqueNm * t * (Powertrain.Mode == DriveMode.Reverse ? 0.6f : 1f);
+            float gearRatio = Powertrain.Mode == DriveMode.Reverse ? 3.4f
+                : Powertrain.GearRatios[Mathf.Clamp(Powertrain.GearIndex, 0, Powertrain.GearRatios.Length - 1)];
+            float wheelTorque = Powertrain.TorqueNm * t * gearRatio * Powertrain.FinalDrive;
+            return wheelTorque * (Powertrain.Mode == DriveMode.Reverse ? 0.6f : 1f);
         }
 
         private float WheelRpmAverage()

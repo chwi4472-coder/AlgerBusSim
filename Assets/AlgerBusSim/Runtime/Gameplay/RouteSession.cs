@@ -159,6 +159,12 @@ namespace AlgerBusSim.Gameplay
                 if (_redLightCooldown > 0f) _redLightCooldown -= Time.deltaTime;
 
                 // update HUD
+                _hud.SetSpeed(_bus.SpeedKmh());
+                _hud.SetGear(_bus.Powertrain.GearLabel);
+                _hud.SetFuel(_bus.FuelTank.Level01());
+                float hour = _session.DayNight.Hour;
+                int hh = Mathf.FloorToInt(hour); int mm = Mathf.FloorToInt((hour - hh) * 60f);
+                _hud.SetTime(hh.ToString("00") + ":" + mm.ToString("00"));
                 _hud.UpdateRoute(_currentStop != null ? _currentStop.Name(AlgerBusSim.Localization.Localization.Language) : "", _currentStop != null ? Vector3.Distance(_bus.transform.position, _currentStop.BusPosition) : 0f, _onboard, _earned, _stopIndex, _layout.Stops.Count);
 
                 // fuel low

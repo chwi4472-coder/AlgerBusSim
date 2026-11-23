@@ -11,6 +11,7 @@ namespace AlgerBusSim.Core
         void Awake()
         {
             QualitySettings.vSyncCount = 0;
+            QualitySettings.antiAliasing = 4;
             Application.targetFrameRate = Mathf.Max(30, targetFrameRate);
             Screen.sleepTimeout = keepScreenAwake ? SleepTimeout.NeverSleep : SleepTimeout.SystemSetting;
             Screen.orientation = ScreenOrientation.LandscapeLeft;

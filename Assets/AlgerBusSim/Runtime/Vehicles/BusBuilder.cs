@@ -50,8 +50,8 @@ namespace AlgerBusSim.Vehicles
             // Lower body
             Box(t, "LowerBody", new Vector3(0f, 0.85f, 0f), new Vector3(2.5f, 1.1f, 11.6f), white);
             // Skirt stripe
-            Box(t, "Skirt", new Vector3(0f, 0.32f, 0f), new Vector3(2.52f, 0.22f, 11.62f), teal);
-            Box(t, "SkirtBlue", new Vector3(0f, 0.52f, 0f), new Vector3(2.52f, 0.18f, 11.62f), blue);
+            Box(t, "Skirt", new Vector3(0f, 0.45f, 0f), new Vector3(2.58f, 0.5f, 11.7f), teal);
+            Box(t, "SkirtBlue", new Vector3(0f, 0.85f, 0f), new Vector3(2.58f, 0.3f, 11.7f), blue);
             // Mid body
             Box(t, "MidBody", new Vector3(0f, 1.95f, 0f), new Vector3(2.5f, 1.1f, 11.6f), white);
             // Upper body
@@ -72,16 +72,16 @@ namespace AlgerBusSim.Vehicles
             {
                 float x = side * 1.265f;
                 // main glass strip
-                Box(t, "WindowBand" + side, new Vector3(x, 2.15f, -0.1f), new Vector3(0.06f, 0.95f, 10.0f), glass);
+                Box(t, "WindowBand" + side, new Vector3(side * 1.30f, 2.2f, -0.1f), new Vector3(0.1f, 1.1f, 10.2f), glass);
                 // pillars
                 for (int i = 0; i < 9; i++)
                 {
                     float z = -4.4f + i * 1.1f;
-                    Box(t, "Pillar" + side + i, new Vector3(x, 2.15f, z), new Vector3(0.09f, 1.0f, 0.12f), white);
+                    Box(t, "Pillar" + side + i, new Vector3(side * 1.31f, 2.2f, z), new Vector3(0.12f, 1.15f, 0.14f), white);
                 }
             }
             // Front windshield
-            Box(t, "Windshield", new Vector3(0f, 2.25f, 5.78f), new Vector3(2.1f, 1.35f, 0.08f), glass);
+            Box(t, "Windshield", new Vector3(0f, 2.3f, 5.85f), new Vector3(2.2f, 1.5f, 0.1f), glass);
             // windshield frame
             Box(t, "WindshieldFrameTop", new Vector3(0f, 2.95f, 5.78f), new Vector3(2.2f, 0.12f, 0.12f), white);
             Box(t, "WindshieldFrameBot", new Vector3(0f, 1.55f, 5.78f), new Vector3(2.2f, 0.12f, 0.12f), white);
@@ -130,7 +130,7 @@ namespace AlgerBusSim.Vehicles
                 float x = side * 1.28f;
                 var decal = new GameObject("Decal" + side);
                 decal.transform.SetParent(t, false);
-                decal.transform.localPosition = new Vector3(x, 1.35f, 0.3f);
+                decal.transform.localPosition = new Vector3(side * 1.32f, 1.5f, 0.3f);
                 decal.transform.localRotation = Quaternion.Euler(0f, side > 0 ? 90f : -90f, 0f);
                 decal.transform.localScale = new Vector3(6.0f, 1.0f, 1f);
                 var dmf = decal.AddComponent<MeshFilter>(); dmf.sharedMesh = BuildQuadMesh();
