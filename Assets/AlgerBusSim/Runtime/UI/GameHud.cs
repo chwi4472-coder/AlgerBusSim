@@ -114,8 +114,8 @@ namespace AlgerBusSim.UI
             CreateHoldButton(_root.transform, "SteerRight", "▶", new Vector2(90, 90), new Vector2(120, 180), HoldButton.Kind.SteerRight);
 
             // Pedals (bottom-right)
-            CreateHoldButton(_root.transform, "Brake", "FREIN", new Vector2(160, 160), new Vector2(-20, 20), HoldButton.Kind.Brake, new Color(0.78f, 0.18f, 0.18f, 0.7f));
-            CreateHoldButton(_root.transform, "Throttle", "GAZ", new Vector2(160, 160), new Vector2(-190, 20), HoldButton.Kind.Throttle, new Color(0.18f, 0.55f, 0.25f, 0.7f));
+            CreateHoldButton(_root.transform, "Brake", "FREIN", new Vector2(160, 160), new Vector2(-20, 20), HoldButton.Kind.Brake, new Color(0.78f, 0.18f, 0.18f, 0.7f), true);
+            CreateHoldButton(_root.transform, "Throttle", "GAZ", new Vector2(160, 160), new Vector2(-190, 20), HoldButton.Kind.Throttle, new Color(0.18f, 0.55f, 0.25f, 0.7f), true);
 
             // Door button (tap)
             var doorBtn = UiFactory.Button(_root.transform, "DoorBtn", "PORTES", new Vector2(110, 50), new Vector2(-20, 150), new Color(0.18f, 0.20f, 0.28f, 0.85f), Color.white, 16, () => { if (GameSession.Instance.Controller != null) GameSession.Instance.Controller.DoorSystem.Toggle(); });
@@ -154,7 +154,7 @@ namespace AlgerBusSim.UI
             _summaryPanel.SetActive(false);
         }
 
-        private void CreateHoldButton(Transform parent, string name, string label, Vector2 size, Vector2 pos, HoldButton.Kind kind, Color? color = null)
+        private void CreateHoldButton(Transform parent, string name, string label, Vector2 size, Vector2 pos, HoldButton.Kind kind, Color? color = null, bool rightSide = false)
         {
             Color bg = color ?? new Color(1f, 1f, 1f, 0.25f);
             var btn = UiFactory.Button(parent, name, label, size, pos, bg, Color.white, 18, null);
@@ -164,9 +164,16 @@ namespace AlgerBusSim.UI
             hb.normalColor = bg;
             hb.pressedColor = new Color(bg.r, bg.g, bg.b, 0.7f);
             btn.GetComponent<Image>().color = bg;
-            // position anchors bottom-left
             var rt = btn.GetComponent<RectTransform>();
-            rt.anchorMin = new Vector2(0, 0); rt.anchorMax = new Vector2(0, 0); rt.pivot = new Vector2(0, 0);
+            if (rightSide)
+            {
+                rt.anchorMin = new Vector2(1, 0); rt.anchorMax = new Vector2(1, 0); rt.pivot = new Vector2(1, 0);
+            }
+            else
+            {
+                rt.anchorMin = new Vector2(0, 0); rt.anchorMax = new Vector2(0, 0); rt.pivot = new Vector2(0, 0);
+            }
+            rt.anchoredPosition = pos;
         }
 
         public void Show() { if (_root != null) _root.SetActive(true); }
