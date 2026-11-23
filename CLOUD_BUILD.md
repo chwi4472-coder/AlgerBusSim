@@ -45,17 +45,51 @@ GitHub repo → Settings → Secrets and variables → Actions → New repositor
 
 ### 6. Build the APK
 GitHub → Actions → "Build Android APK" → **Run workflow**.
-First build ~30–60 min; later builds are faster (cached Library).
-When finished: open the run → Artifacts → download `AlgerBusSim-APK` → `AlgerBusSim.apk`.
+First build ~30–60 min. When done: open the run → Artifacts → download `AlgerBusSim-APK` → `AlgerBusSim.apk`.
 
 ### 7. Install on Samsung Galaxy S23+
 1. Copy the APK to the phone.
 2. Settings → Apps → Special access → Install unknown apps → allow your file manager/browser.
 3. Tap the APK → Install → Open.
 
-## Notes
+---
+
+## ⚠️ Troubleshooting: build killed with exit code 137 (OOM)
+
+If the build fails with `Build failed with exit code 137` (the Unity process is killed by the runner's OOM killer), the standard GitHub runner (16 GB RAM / 14 GB disk) is **not enough** for this Unity 6 Android IL2CPP build. The swap added to the workflow cannot help because the container's memory limit is enforced by cgroups.
+
+### Free solution: Oracle Cloud Always Free (recommended)
+Oracle Cloud offers a **free-forever** VM with 4 OCPUs, 24 GB RAM, 200 GB disk. Use it as a self-hosted GitHub Actions runner.
+
+**Setup (~30 min, one-time):**
+1. Create a free account: https://www.oracle.com/cloud/free/
+2. Create a VM: Compute → Instances → Create. Choose:
+   - Image: Ubuntu 22.04 (or 24.04).
+   - Shape: VM.Standard.A1.Flex (ARM) with 4 OCPUs / 24 GB RAM — **Always Free eligible**.
+   - Boot volume: 200 GB.
+   - Add your SSH public key.
+3. SSH into the VM and install Docker + the self-hosted runner:
+   ```
+   sudo apt update && sudo apt install -y docker.io
+   sudo usermod -aG docker $USER
+   # then log out and back in
+   ```
+4. On GitHub: repo → Settings → Actions → Runners → **New self-hosted runner** → choose Linux → copy the registration commands (they include a token).
+5. Run those commands on the VM (in a folder like `~/actions-runner`). The runner registers with GitHub.
+6. Start the runner: `./run.sh` (or install as a service: `sudo ./svc.sh install && sudo ./svc.sh start`).
+7. Update the workflow: change `runs-on: ubuntu-latest` to `runs-on: self-hosted` in `.github/workflows/build-android.yml`, commit and push.
+8. Re-run the build — it now runs on your 24 GB VM and should complete.
+
+### Alternative: a friend's PC
+If a friend has a PC with 16+ GB RAM and ~20 GB free disk, they can install Unity 6000.6.8f1 + Android module (free Personal license) and run the build locally:
+```
+Unity.exe -quit -batchmode -projectPath . -executeMethod AlgerBusSim.EditorTools.BuildScript.BuildAndroid
+```
+The APK lands in `Builds/AlgerBusSim.apk`.
+
+### Notes
 - Unity 6000.6.8f1 (matches `ProjectSettings/ProjectVersion.txt`).
-- Build method: `AlgerBusSim.EditorTools.BuildScript.BuildAndroid` (configures + creates scene + builds).
+- Build method: `AlgerBusSim.EditorTools.BuildScript.BuildAndroid`.
 - Output: `Builds/AlgerBusSim.apk` (ARM64, IL2CPP, ASTC) — a real APK with all game features.
 - Never commit the `.ulf` or your password. They live only in GitHub Secrets.
 - Public repos get unlimited Actions minutes; private repos get 2000 min/month.
