@@ -47,11 +47,11 @@ namespace AlgerBusSim.Player
                 desired = origin + toDesired.normalized * (hit.distance - 0.5f);
             }
 
-            transform.position = Vector3.SmoothDamp(transform.position, desired, ref _vel, 1f / Smooth);
+            Camera.transform.position = Vector3.SmoothDamp(Camera.transform.position, desired, ref _vel, 1f / Smooth);
 
             Vector3 lookTarget = Target.position + forward * LookAhead + Vector3.up * 1.6f;
-            Quaternion lookRot = Quaternion.LookRotation(lookTarget - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * Smooth);
+            Quaternion lookRot = Quaternion.LookRotation(lookTarget - Camera.transform.position);
+            Camera.transform.rotation = Quaternion.Slerp(Camera.transform.rotation, lookRot, Time.deltaTime * Smooth);
 
             // FOV
             float speedKmh = 0f;
